@@ -1,17 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:measureAllChildren="true">
-    <ImageView
-        android:src="@drawable/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"></ImageView>
-    <TextView
-        android:layout_gravity="center"
-        android:text="Lập trình android"
-        android:textSize="30sp"
-        android:textColor="#ff00"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></TextView>
-</FrameLayout>
+    android:layout_height="match_parent"
+    android:stretchColumns="*">
+    <TableRow>
+        <TextView
+            android:gravity="center"
+            android:background="#304FFE"
+            android:layout_span="4"
+            android:text="Dong cot"
+            android:textSize="24sp"></TextView>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:text="Dong cot"
+            android:textSize="24sp"></TextView>
+        <TextView
+            android:text="Dong cot"
+            android:textSize="24sp"></TextView>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:text="Dong cot"
+            android:textSize="24sp"></TextView>
+        <TextView
+            android:text="Dong cot"
+            android:textSize="24sp"></TextView>
+        <TextView
+            android:text="Dong cot"
+            android:textSize="24sp"></TextView>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:text="Dong cot"
+            android:textSize="24sp"></TextView>
+        <TextView
+            android:text="Dong cot"
+            android:textSize="24sp"></TextView>
+        <TextView
+            android:text="Dong cot"
+            android:textSize="24sp"></TextView>
+        <TextView
+            android:text="Dong cot"
+            android:textSize="24sp"></TextView>
+    </TableRow>
+</TableLayout>

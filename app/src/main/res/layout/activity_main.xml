@@ -36,5 +36,5 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="User name"
-        android:drawableLeft="@mipmap/ic_launcher"/>
+        android:drawableLeft="@drawable/icons_user_office_30"/>
 </RelativeLayout>

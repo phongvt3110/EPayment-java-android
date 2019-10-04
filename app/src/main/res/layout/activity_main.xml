@@ -8,9 +8,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#64DD17"
-        android:text="TextView"
-        android:layout_centerInParent="true"
-        android:textSize="30sp" />
+        android:text="Đăng nhập hệ thống"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"/>
 
     <Button
         android:id="@+id/btnClick"
@@ -31,10 +32,43 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="113dp"
         android:layout_marginEnd="20dp"
+        android:drawableLeft="@drawable/icons_user_office_30"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="User name"
-        android:drawableLeft="@drawable/icons_user_office_30"/>
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Min number"/>
+
+    <EditText
+        android:id="@+id/max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_below="@id/min"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        android:hint="Max number"/>
+
+    <Button
+        android:id="@+id/btnGen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/max"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="20dp"
+        android:background="#64DD17"
+        android:text="Gen number"
+        android:textAllCaps="false" />
 </RelativeLayout>

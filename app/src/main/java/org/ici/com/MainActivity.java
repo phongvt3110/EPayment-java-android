@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         btnClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                txtNoidung.setText("Lập trình Android");
+                txtNoidung.setText("Đang xử lý ...");
             }
         });
     }

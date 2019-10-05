@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -31,8 +32,20 @@ public class MainActivity extends AppCompatActivity {
         btnGen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String ranNum = String.valueOf(randomnum(minText.getText().toString(), maxText.getText().toString()));
-                userName.setText(ranNum);
+                String chuoiMin = minText.getText().toString();
+                String chuoiMax = maxText.getText().toString();
+                if(chuoiMin.isEmpty() || chuoiMax.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "Please enter all number needed", Toast.LENGTH_SHORT).show();
+                } else {
+                    int minNum = Integer.parseInt(chuoiMin);
+                    int maxNum = Integer.parseInt(chuoiMax);
+                    if(maxNum - minNum > 0) {
+                        String ranNum = String.valueOf(randomnum(minNum, maxNum));
+                        userName.setText(ranNum);
+                    } else {
+                        Toast.makeText(MainActivity.this, "Min number equals to max number", Toast.LENGTH_SHORT).show();
+                    }
+                }
             }
         });
     }
@@ -46,11 +59,9 @@ public class MainActivity extends AppCompatActivity {
         maxText = findViewById(R.id.max);
         userName.setText("Android Khoa Pham");
     }
-    private int randomnum(String min, String max){
+    private int randomnum(int min, int max){
         Random random = new Random();
-        int minnum = Integer.parseInt(min);
-        int maxnum = Integer.parseInt(max);
-        int rannum = random.nextInt(maxnum - minnum + 1) + minnum;
+        int rannum = random.nextInt(max - min + 1) + min;
         return rannum;
     }
 }

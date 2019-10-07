@@ -2,12 +2,14 @@ package org.ici.com;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import org.ici.com.ui.login.LoginActivity;
 
 import java.util.Random;
 
@@ -15,9 +17,7 @@ public class MainActivity extends AppCompatActivity {
     TextView txtNoidung;
     Button btnClick;
     EditText userName;
-    Button btnGen;
-    EditText minText;
-    EditText maxText;
+    Button btnRandomNumber;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,25 +27,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 txtNoidung.setText("Đang xử lý ...");
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
             }
         });
-        btnGen.setOnClickListener(new View.OnClickListener() {
+        btnRandomNumber.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String chuoiMin = minText.getText().toString();
-                String chuoiMax = maxText.getText().toString();
-                if(chuoiMin.isEmpty() || chuoiMax.isEmpty()) {
-                    Toast.makeText(MainActivity.this, "Please enter all number needed", Toast.LENGTH_SHORT).show();
-                } else {
-                    int minNum = Integer.parseInt(chuoiMin);
-                    int maxNum = Integer.parseInt(chuoiMax);
-                    if(maxNum - minNum > 0) {
-                        String ranNum = String.valueOf(randomnum(minNum, maxNum));
-                        userName.setText(ranNum);
-                    } else {
-                        Toast.makeText(MainActivity.this, "Min number equals to max number", Toast.LENGTH_SHORT).show();
-                    }
-                }
+                Intent intent = new Intent(MainActivity.this, RandomNumberActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -53,11 +42,9 @@ public class MainActivity extends AppCompatActivity {
     private void init() {
         txtNoidung = (TextView) findViewById(R.id.txtNoidung);
         btnClick = (Button) findViewById(R.id.btnClick);
-        btnGen = findViewById(R.id.btnGen);
         userName = (EditText) findViewById(R.id.username);
-        minText = findViewById(R.id.min);
-        maxText = findViewById(R.id.max);
         userName.setText("Android Khoa Pham");
+        btnRandomNumber = findViewById(R.id.btnRandom);
     }
     private int randomnum(int min, int max){
         Random random = new Random();

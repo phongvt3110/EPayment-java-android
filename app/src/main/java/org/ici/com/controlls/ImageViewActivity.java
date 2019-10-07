@@ -5,9 +5,12 @@ import org.ici.com.R;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -19,6 +22,8 @@ public class ImageViewActivity extends AppCompatActivity {
     Button changeBackground;
     ImageButton imageButton;
     ArrayList<Integer> arrayImage;
+    Switch swWifi;
+    CheckBox android;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +49,28 @@ public class ImageViewActivity extends AppCompatActivity {
                 Random random = new Random();
                 int vitri = random.nextInt(arrayImage.size());
                 relativeLayout.setBackgroundResource(arrayImage.get(vitri));
+            }
+        });
+        swWifi = findViewById(R.id.swWifi);
+        swWifi.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b) {
+                    Toast.makeText(ImageViewActivity.this, "Switch ON", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(ImageViewActivity.this, "Switch Off", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        android = findViewById(R.id.checkBox);
+        android.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b) {
+                    Toast.makeText(ImageViewActivity.this, "Checked On", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(ImageViewActivity.this, "Checked Off", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

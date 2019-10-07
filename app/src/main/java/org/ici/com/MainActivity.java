@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 txtNoidung.setText("Đang xử lý ...");
-                startActivity(new Intent(MainActivity.this, LoginActivity.class));
             }
         });
         btnRandomNumber.setOnClickListener(new View.OnClickListener() {

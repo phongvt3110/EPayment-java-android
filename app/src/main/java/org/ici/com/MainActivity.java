@@ -32,8 +32,7 @@ public class MainActivity extends AppCompatActivity {
         btnRandomNumber.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, RandomNumberActivity.class);
-                startActivity(intent);
+                startActivity(new Intent(MainActivity.this, RandomNumberActivity.class));
             }
         });
     }

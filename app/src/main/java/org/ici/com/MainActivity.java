@@ -9,13 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.ici.com.ui.login.LoginActivity;
-
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     TextView txtNoidung;
-    Button btnClick;
+    Button btnSubmit;
     EditText userName;
     Button btnRandomNumber;
     @Override
@@ -23,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
-        btnClick.setOnClickListener(new View.OnClickListener() {
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                txtNoidung.setText("Đang xử lý ...");
+                startActivity(new Intent(MainActivity.this, DashboardActivity.class));
             }
         });
         btnRandomNumber.setOnClickListener(new View.OnClickListener() {
@@ -35,11 +33,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, RandomNumberActivity.class));
             }
         });
+
     }
 
     private void init() {
         txtNoidung = (TextView) findViewById(R.id.txtNoidung);
-        btnClick = (Button) findViewById(R.id.btnClick);
+        btnSubmit = (Button) findViewById(R.id.btnSubmit);
         userName = (EditText) findViewById(R.id.username);
         userName.setText("Android Khoa Pham");
         btnRandomNumber = findViewById(R.id.btnRandom);

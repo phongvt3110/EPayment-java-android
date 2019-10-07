@@ -9,9 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".controlls.ImageViewActivity"></activity>
+        <activity android:name=".DashboardActivity" />
+        <activity
+            android:name=".controlls.BottomNavigation"
+            android:label="@string/title_activity_bottom_navigation" />
         <activity
             android:name=".ui.login.LoginActivity"
-            android:label="@string/title_activity_login"></activity>
+            android:label="@string/title_activity_login" />
         <activity android:name=".RandomNumberActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -14,7 +14,7 @@
         android:layout_centerHorizontal="true"/>
 
     <Button
-        android:id="@+id/btnClick"
+        android:id="@+id/btnSubmit"
         android:textAllCaps="false"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
         android:id="@+id/btnRandom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/btnClick"
+        android:layout_above="@id/btnSubmit"
         android:layout_marginBottom="20dp"
         android:text="RandomNumber"
         android:layout_centerHorizontal="true"/>

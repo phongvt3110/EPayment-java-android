@@ -21,7 +21,17 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
+        android:textAllCaps="false"
         android:text="ChangeBackground" />
+    <Button
+        android:id="@+id/btnCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:textAllCaps="false"
+        android:text="Checkbox" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -38,13 +48,29 @@
         android:id="@+id/swWifi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SwitchWifi" />
+        android:text="SwitchWifi"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/android"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Android"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="60dp"/>
+    <CheckBox
+        android:id="@+id/ios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IOS"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"/>
+    <CheckBox
+        android:id="@+id/php"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PHP"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"/>
 </RelativeLayout>

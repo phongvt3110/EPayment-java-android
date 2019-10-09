@@ -20,10 +20,13 @@ public class ImageViewActivity extends AppCompatActivity {
     ImageView imageView;
     RelativeLayout relativeLayout;
     Button changeBackground;
+    Button BtnCheckbox;
     ImageButton imageButton;
     ArrayList<Integer> arrayImage;
     Switch swWifi;
     CheckBox android;
+    CheckBox ios;
+    CheckBox php;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,7 +65,26 @@ public class ImageViewActivity extends AppCompatActivity {
                 }
             }
         });
-        android = findViewById(R.id.checkBox);
+        android = findViewById(R.id.android);
+        ios = findViewById(R.id.ios);
+        php = findViewById(R.id.php);
+        BtnCheckbox = findViewById(R.id.btnCheckbox);
+        BtnCheckbox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String str = "You checked: \n";
+                if(android.isChecked()){
+                    str += android.getText() + "\n";
+                }
+                if(ios.isChecked()){
+                    str += ios.getText() + "\n";
+                }
+                if(php.isChecked()){
+                    str += php.getText();
+                }
+                Toast.makeText(ImageViewActivity.this, str, Toast.LENGTH_SHORT).show();
+            }
+        });
         android.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {

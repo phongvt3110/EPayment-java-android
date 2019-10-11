@@ -56,21 +56,23 @@
         android:id="@+id/android"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:text="Android"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginStart="20dp"/>
+
     <CheckBox
         android:id="@+id/ios"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
         android:text="IOS"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginStart="20dp"/>
+
     <CheckBox
         android:id="@+id/php"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
         android:text="PHP"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="140dp"/>
+        android:layout_marginStart="20dp"/>
 </RelativeLayout>

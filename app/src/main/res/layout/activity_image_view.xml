@@ -75,4 +75,48 @@
         android:layout_marginTop="140dp"
         android:text="PHP"
         android:layout_marginStart="20dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgCheckTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="120dp"
+        android:minHeight="200dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="60dp"
+        >
+
+        <RadioButton
+            android:id="@+id/sang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:checked="true"
+            android:text="Sang" />
+
+        <RadioButton
+            android:id="@+id/trua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Trua" />
+
+        <RadioButton
+            android:id="@+id/chieu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Chieu" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnCheckTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/btnCheckbox"
+        android:layout_alignBaseline="@+id/btnCheckbox"
+        android:layout_marginLeft="20dp"
+        android:text="CheckTime"
+        android:textAllCaps="false" />
+
 </RelativeLayout>

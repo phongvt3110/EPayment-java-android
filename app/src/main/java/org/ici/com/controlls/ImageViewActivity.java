@@ -9,6 +9,8 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.Toast;
@@ -27,6 +29,11 @@ public class ImageViewActivity extends AppCompatActivity {
     CheckBox android;
     CheckBox ios;
     CheckBox php;
+    RadioGroup checkTime;
+    Button btnChectime;
+    RadioButton rbSang;
+    RadioButton rbTrua;
+    RadioButton rbChieu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,6 +99,42 @@ public class ImageViewActivity extends AppCompatActivity {
                     Toast.makeText(ImageViewActivity.this, "Checked On", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(ImageViewActivity.this, "Checked Off", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        checkTime = findViewById(R.id.rgCheckTime);
+        checkTime.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId){
+                    case R.id.sang:
+                        Toast.makeText(ImageViewActivity.this, "Ban chon Sang", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.trua:
+                        Toast.makeText(ImageViewActivity.this, "Ban chon trua", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.chieu:
+                        Toast.makeText(ImageViewActivity.this, "Ban chon chieu", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+            }
+        });
+
+        btnChectime = findViewById(R.id.btnCheckTime);
+        rbSang = findViewById(R.id.sang);
+        rbTrua = findViewById(R.id.trua);
+        rbChieu = findViewById(R.id.chieu);
+        btnChectime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(rbSang.isChecked()){
+                    Toast.makeText(ImageViewActivity.this,rbSang.getText(), Toast.LENGTH_SHORT).show();
+                }
+                if(rbTrua.isChecked()){
+                    Toast.makeText(ImageViewActivity.this, rbTrua.getText(), Toast.LENGTH_SHORT).show();
+                }
+                if(rbChieu.isChecked()) {
+                    Toast.makeText(ImageViewActivity.this, rbChieu.getText(), Toast.LENGTH_SHORT).show();
                 }
             }
         });

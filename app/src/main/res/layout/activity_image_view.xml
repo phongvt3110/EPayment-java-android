@@ -12,7 +12,8 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/icons_user_office_30"></ImageView>
+        android:src="@drawable/icons_user_office_30"
+        android:contentDescription="@string/image"></ImageView>
 
     <Button
         android:id="@+id/btnChangeBackground"
@@ -22,7 +23,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
         android:textAllCaps="false"
-        android:text="ChangeBackground" />
+        android:text="@string/change_background" />
     <Button
         android:id="@+id/btnCheckbox"
         android:layout_width="wrap_content"

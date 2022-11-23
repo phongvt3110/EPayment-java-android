@@ -18,4 +18,13 @@
     <string name="title_notifications">Notifications</string>
     <string name="image">image</string>
     <string name="change_background">ChangeBackground</string>
+    <string name="checkbox">Checkbox</string>
+    <string name="checktime">CheckTime</string>
+    <string name="switchwifi">SwitchWifi</string>
+    <string name="android">Android</string>
+    <string name="sang">Sang</string>
+    <string name="chieu">Chieu</string>
+    <string name="ios">IOS</string>
+    <string name="php">PHP</string>
+    <string name="trua">Trua</string>
 </resources>

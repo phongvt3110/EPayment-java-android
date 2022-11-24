@@ -7,11 +7,12 @@
         android:id="@+id/min"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="100dp"
         android:ems="10"
         android:inputType="number"
-        android:hint="Min number"/>
+        android:hint="@string/min_number"
+        android:autofillHints="1" />
 
     <EditText
         android:id="@+id/max"
@@ -20,28 +21,29 @@
         android:ems="10"
         android:inputType="number"
         android:layout_below="@id/min"
-        android:layout_marginLeft="100dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="50dp"
-        android:hint="Max number"/>
+        android:hint="@string/max_number"
+        android:autofillHints="2" />
 
     <Button
         android:id="@+id/btnGen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/max"
-        android:layout_marginLeft="150dp"
+        android:layout_marginStart="150dp"
         android:layout_marginTop="20dp"
         android:background="#64DD17"
-        android:text="Gen number"
+        android:text="@string/gen_number"
         android:textAllCaps="false" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/randomNumberTextView"
         android:layout_centerHorizontal="true"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:layout_marginTop="20dp"/>
 
 </RelativeLayout>

@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#64DD17"
-        android:text="Đăng nhập hệ thống"
+        android:text="@string/dang_nhap_he_thong"
         android:textSize="30sp"
         android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"/>
@@ -22,7 +22,7 @@
         android:layout_marginBottom="40dp"
         android:layout_centerHorizontal="true"
         android:background="#64DD17"
-        android:text="Submit" />
+        android:text="@string/submit" />
 
     <EditText
         android:id="@+id/username"
@@ -34,10 +34,11 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="113dp"
         android:layout_marginEnd="20dp"
-        android:drawableLeft="@drawable/icons_user_office_30"
+        android:drawableStart="@drawable/icons_user_office_30"
         android:ems="10"
-        android:hint="User name"
-        android:inputType="textPersonName" />
+        android:hint="@string/user_name"
+        android:inputType="textPersonName"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/password"
@@ -47,12 +48,12 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:ems="10"
         android:inputType="textPassword"
-        android:hint="Password"/>
+        android:hint="@string/password"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/btnRandom"
@@ -60,6 +61,6 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/btnSubmit"
         android:layout_marginBottom="20dp"
-        android:text="RandomNumber"
+        android:text="@string/randomnumber"
         android:layout_centerHorizontal="true"/>
 </RelativeLayout>

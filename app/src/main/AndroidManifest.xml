@@ -8,7 +8,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".controlls.ImageViewActivity"></activity>
+        <activity android:name=".controlls.ImageViewActivity" />
         <activity android:name=".DashboardActivity" />
         <activity
             android:name=".controlls.BottomNavigation"

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/imageViewScreen"
+    android:background="#00B8D4">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icons_user_office_30"
+        tools:ignore="ImageContrastCheck"></ImageView>
+
+    <Button
+        android:id="@+id/btnChangeBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:textAllCaps="false"
+        android:text="@string/change_background" />
+    <Button
+        android:id="@+id/btnCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:textAllCaps="false"
+        android:text="@string/checkbox" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="106dp"
+        android:background="@null"
+        android:contentDescription="@string/image"
+        android:src="@mipmap/ic_launcher"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Switch
+        android:id="@+id/swWifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:minHeight="48dp"
+        android:text="@string/switchwifi" />
+
+    <CheckBox
+        android:id="@+id/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:minHeight="48dp"
+        android:text="@string/android" />
+
+    <CheckBox
+        android:id="@+id/ios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:minHeight="48dp"
+        android:text="@string/ios"
+        android:textColor="#263238" />
+
+    <CheckBox
+        android:id="@+id/php"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="140dp"
+        android:minHeight="48dp"
+        android:text="@string/php"
+        android:textColor="#263238" />
+
+    <RadioGroup
+        android:id="@+id/rgCheckTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="120dp"
+        android:minHeight="200dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="60dp"
+        >
+
+        <RadioButton
+            android:id="@+id/sang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:checked="true"
+            android:minHeight="48dp"
+            android:text="@string/sang" />
+
+        <RadioButton
+            android:id="@+id/trua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:minHeight="48dp"
+            android:text="@string/trua"
+            android:textColor="#263238" />
+
+        <RadioButton
+            android:id="@+id/chieu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:minHeight="48dp"
+            android:text="@string/chieu"
+            android:textColor="#263238" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnCheckTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/btnCheckbox"
+        android:layout_alignBaseline="@+id/btnCheckbox"
+        android:layout_marginStart="20dp"
+        android:text="@string/checktime"
+        android:textAllCaps="false" />
+
+</RelativeLayout>
